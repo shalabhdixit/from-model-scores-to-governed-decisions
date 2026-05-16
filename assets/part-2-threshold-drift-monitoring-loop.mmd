@@ -1,0 +1,17 @@
+flowchart LR
+    A[Production signals]
+    B[Decision monitoring layer]
+    C{Signal outside approved range?}
+    D[Normal operation]
+    E[Policy review trigger]
+    F[Recalibration simulation]
+    G{Approved action}
+    H[Deploy new threshold version]
+    I[Rollback to prior policy]
+    J[Audit record and post-change monitoring]
+    A --> B --> C
+    C -->|No| D --> B
+    C -->|Yes| E --> F --> G
+    G -->|Recalibrate| H --> J
+    G -->|Incident rollback| I --> J
+    J --> B

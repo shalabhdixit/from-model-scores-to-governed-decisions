@@ -1,0 +1,16 @@
+flowchart TB
+    A[Decision context model score segment queue state risk policy]
+    B[Threshold registry lookup]
+    C[Eligibility and consent checks]
+    D[Segment rules and fairness guardrails]
+    E[Capacity-aware routing]
+    F[Reason codes and audit fields]
+    G[Governance controls embedded]
+    H{Approved action}
+    I[Approve or auto clear]
+    J[Human review]
+    K[Block escalate or challenger route]
+    A --> B --> C --> D --> E --> F --> G --> H
+    H --> I
+    H --> J
+    H --> K

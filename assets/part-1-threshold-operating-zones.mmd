@@ -1,0 +1,9 @@
+flowchart TB
+    A[Model score from 0.00 to 1.00]
+    B[Below threshold class 0 route]
+    C[Approved threshold operating decision boundary]
+    D[At or above threshold class 1 route]
+    E[Business action approve review block escalate retain prioritize]
+    A --> B
+    A --> C
+    C --> D --> E

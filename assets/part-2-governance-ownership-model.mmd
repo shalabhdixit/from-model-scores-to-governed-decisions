@@ -1,0 +1,29 @@
+flowchart TB
+    A[Evidence providers]
+    B[Data science metrics calibration validation]
+    C[ML engineering deployment logging reliability]
+    D[Finance cost benefit exposure]
+    E[Operations capacity backlog SLA]
+    F[Threshold policy decision record]
+    G[Approval authorities]
+    H[Risk appetite incident limits]
+    I[Compliance audit fairness regulation]
+    J[Product customer friction rollout]
+    K[AI governance board approval exceptions rollback]
+    L[Operating controls]
+    M[Threshold registry]
+    N[Monitoring dashboard]
+    O[Review cadence]
+    P[Rollback owner]
+    A --> B --> F
+    A --> C --> F
+    A --> D --> F
+    A --> E --> F
+    F --> G
+    G --> H --> K
+    G --> I --> K
+    G --> J --> K
+    K --> L --> M
+    M --> N --> O
+    M --> P
+    P --> M

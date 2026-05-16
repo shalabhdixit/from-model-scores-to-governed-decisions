@@ -1,0 +1,10 @@
+flowchart TB
+    A[Validation data observed labels plus probability scores]
+    B[Apply candidate thresholds 0.10 to 0.90]
+    C[Create predicted labels]
+    D[Evaluate confusion matrix precision recall F1 ROC AUC]
+    E[Translate errors into business impact]
+    F[Apply operating guardrails manual review capacity]
+    G[Select operating threshold inside approved constraints]
+    H[Package for production decision logging]
+    A --> B --> C --> D --> E --> F --> G --> H

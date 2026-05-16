@@ -1,0 +1,23 @@
+flowchart TB
+    A[Business event]
+    B[Event stream and feature pipeline]
+    C[Feature store]
+    D[Model scoring API]
+    E[Calibrated probability score]
+    F[Threshold policy engine]
+    G[Governance metadata]
+    H{Decision route}
+    I1[Approve or auto clear]
+    I2[Human review]
+    I3[Block escalate or prioritize]
+    J[Outcome capture and audit log]
+    K[Monitoring and drift detection]
+    L[Recalibration or rollback]
+    A --> B --> C --> D --> E --> F --> G --> H
+    H --> I1
+    H --> I2
+    H --> I3
+    I1 --> J
+    I2 --> J
+    I3 --> J
+    J --> K --> L --> F

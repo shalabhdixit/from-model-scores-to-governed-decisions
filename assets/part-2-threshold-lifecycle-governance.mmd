@@ -1,0 +1,14 @@
+flowchart TB
+    A[Propose change]
+    B[Validate metrics calibration cost capacity fairness]
+    C[Approve product operations risk compliance governance]
+    D[Deploy versioned config release gates rollback target]
+    E[Monitor volume backlog SLA overrides drift value]
+    F{Policy inside limits?}
+    G[Continue operation scheduled review]
+    H[Recalibrate or rollback new threshold version]
+    I[Audit history decision record and evidence]
+    A --> B --> C --> D --> E --> F
+    F -->|Yes| G --> I
+    F -->|No| H --> I
+    I --> E

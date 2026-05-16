@@ -1,0 +1,19 @@
+flowchart TB
+    A[AI decision score threshold route reason code]
+    B[Human review accept override escalate defer]
+    C[Override reason capture]
+    D[Outcome learning]
+    E[Disagreement analysis]
+    F[Governance review]
+    G[Policy or model action]
+    H[Audit evidence]
+    A --> B
+    B --> C
+    B --> D
+    C --> E
+    D --> E
+    E --> F
+    F --> G
+    F --> H
+    G --> A
+    G --> H
