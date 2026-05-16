@@ -6,7 +6,7 @@ This folder contains a complete Google Colab notebook for the article series **F
 
 | File | Purpose |
 | --- | --- |
-| `from_model_scores_to_governed_decisions_colab_lab.ipynb` | End-to-end executable lab covering threshold tuning, business value, capacity guardrails, segment thresholds, decision logging, and governance checks |
+| `from_model_scores_to_governed_decisions_colab_lab.ipynb` | End-to-end executable lab covering threshold tuning, business value, capacity guardrails, segment thresholds, decision logging, and governance checks. The installed repo also includes calibration review, ROC/precision-recall operating-point analysis, anti-pattern checks, and stakeholder explanation examples. |
 
 ## Open In Colab
 
@@ -23,15 +23,18 @@ https://colab.research.google.com/github/shalabhdixit/from-model-scores-to-gover
 3. Validation data loading.
 4. Baseline threshold application.
 5. Baseline metric evaluation.
-6. Threshold sweep.
-7. Business value modeling.
-8. Operational capacity guardrails.
-9. Guardrail-based threshold selection.
-10. Default versus selected threshold comparison.
-11. Visualization of metric and business-value tradeoffs.
-12. Segment-specific thresholds.
-13. Production decision logging.
-14. Governance checklist for production use.
+6. Probability calibration review through `examples/03b_probability_calibration_review.py`.
+7. Threshold sweep.
+8. Business value modeling.
+9. Operational capacity guardrails.
+10. Guardrail-based threshold selection.
+11. Default versus selected threshold comparison.
+12. Visualization of metric and business-value tradeoffs.
+13. ROC versus precision-recall operating-point analysis through `examples/08b_roc_vs_precision_recall.py`.
+14. Segment-specific thresholds.
+15. Production decision logging.
+16. Anti-pattern checklist and stakeholder explanation through `examples/14_common_anti_patterns.py` and `examples/15_stakeholder_explanation.py`.
+17. Governance checklist for production use.
 
 ## Expected Result
 
@@ -59,4 +62,8 @@ The repo code used by the notebook can be validated with:
 pytest
 python examples/complete_working_example.py
 python examples/08_visualize_tradeoffs.py
+python examples/03b_probability_calibration_review.py
+python examples/08b_roc_vs_precision_recall.py
+python examples/14_common_anti_patterns.py
+python examples/15_stakeholder_explanation.py
 ```
